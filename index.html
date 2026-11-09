@@ -1016,7 +1016,7 @@ const openDrawer = () => { renderList(); document.body.classList.add('open'); };
 const closeDrawer = () => document.body.classList.remove('open');
 $('#menu').onclick = openDrawer; $('#scrim').onclick = closeDrawer;
 async function newChat(){ await haltGen(); S.curId = null; save(); renderChat(); renderList(); closeDrawer(); inp.focus(); }
-$('#newbtn').innerHTML = ic('newc'); $('#newbtn').onclick = newChat;
+$('#d-new').onclick = newChat;
 $('#voicebtn').onclick = openVoice;
 $('#pill').onclick = openModels;
 $('#d-models').onclick = () => { closeDrawer(); openModels(); };
